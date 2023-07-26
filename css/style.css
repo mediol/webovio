@@ -1,0 +1,173 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins";
+}
+
+.container {
+  width: 1110px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.header {
+  width: 100%;
+  position: absolute;
+  top: 24px;
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.header #switcher {
+  display: none;
+}
+.header #switcher:checked ~ .menu {
+  max-height: 600px;
+  padding: 25px;
+}
+.header #switcher:checked ~ label .toggle {
+  transform: rotate(45deg);
+}
+.header #switcher:checked ~ label .toggle::after {
+  top: 0;
+}
+.header #switcher:checked ~ label .toggle::before {
+  top: 0;
+  transform: rotate(-90deg);
+}
+.header #switcher:checked ~ label .toggle {
+  transform: rotate(45deg);
+}
+.header #switcher:checked ~ label .toggle::after {
+  top: 0;
+}
+.header #switcher:checked ~ label .toggle::before {
+  top: 0;
+  transform: rotate(-90deg);
+}
+.header #switcher:checked ~ .menu {
+  max-height: 600px;
+  padding: 25px;
+}
+.header label {
+  display: block;
+  height: 40px;
+  width: 40px;
+  background: #fff;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+}
+.header .toggle {
+  display: block;
+  height: 2px;
+  width: 18px;
+  background: #000;
+  position: absolute;
+  top: calc(50% - 1px);
+  left: calc(50% - 9px);
+}
+.header .toggle::after, .header .toggle::before {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 18px;
+  background: #000;
+  position: absolute;
+}
+.header .toggle::after {
+  top: -5.6px;
+}
+.header .toggle::before {
+  top: 5.6px;
+}
+.header .menu {
+  margin: 0;
+  width: 280px;
+  max-height: 0;
+  background: #fff;
+  overflow: hidden;
+  position: absolute;
+  right: 25px;
+  top: 0;
+  border-radius: 20px;
+  list-style: none;
+  transition: max-height 0.5s, padding 0.8s;
+}
+
+.hero {
+  height: 100vh;
+  background: url("../img/hero-bg.jpg") center/cover no-repeat;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+.hero .container > * {
+  max-width: 55%;
+}
+.hero_uptitle {
+  font-size: 14px;
+  line-height: 21px;
+}
+.hero_title {
+  font-size: 60px;
+  line-height: 74px;
+}
+
+.brands {
+  position: relative;
+}
+.brands_list {
+  background: #fff;
+  padding: 60px 0 54px 65px;
+  position: absolute;
+  top: -120px;
+  right: 0;
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 66px;
+       column-gap: 66px;
+  width: 1276px;
+  max-width: 100%;
+  box-shadow: 50px 50px 100px rgba(0, 0, 0, 0.145947);
+  border-radius: 2px;
+}
+
+.about .container {
+  padding-bottom: 150px;
+  border-bottom: 1px solid rgba(33, 56, 66, 0.0955529);
+  display: flex;
+  align-items: flex-end;
+}
+.about_left {
+  width: 50%;
+}
+.about_right {
+  width: 50%;
+}
+.about_right-wrap {
+  width: 474px;
+  padding: 244px 40px 60px;
+  margin-left: auto;
+  background: #FFFFFF;
+  box-shadow: 0px 100px 100px rgba(0, 0, 0, 0.145947);
+  display: flex;
+  flex-wrap: wrap;
+}
+.about_right-wrap .comment {
+  width: 100%;
+}
+.about_right-wrap img {
+  width: 90px;
+}
+.about_right-wrap .names {
+  width: calc(100% - 90px);
+}/*# sourceMappingURL=style.css.map */
